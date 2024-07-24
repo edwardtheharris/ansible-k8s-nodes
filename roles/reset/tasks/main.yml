@@ -1,0 +1,8 @@
+---
+- name: Reset existing nodes
+  ansible.builtin.shell:
+    cmd: kubeadm reset -f
+  register: reset_result
+- name: Show reset results
+  ansible.builtin.debug:
+    var: reset_result.stdout

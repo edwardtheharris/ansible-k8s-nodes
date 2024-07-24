@@ -1,28 +1,23 @@
 ---
 abstract: This directory contains the playbook to create an intermediate CA.
-authors: Xander Harris
+authors:
+    - name: Xander Harris
+      email: xandertheharris@gmail.com
 date: 2024-03-08
-title: Intermediate CA
+title: Join K8S nodes
 ---
 
-## Intermediate CA Usage
+## Join K8S usage
 
 ```{code-block} shell
-:caption: Create the root CA
-
-ansible-playbook int/site.yml
+ansible-playbook -t join site.yml
 ```
 
-```{index} ca; intermediate
+```{index} ansible; join
 ```
 
-### Intermediate CA Playbook
-<!--
-```{autoyaml} ca/site.yml
-```
--->
+### Join K8S Playbook
 
-```{literalinclude} site.yml
+```{literalinclude} roles/join/tasks/main.yml
 :language: yaml
-:caption: intermediate ca
 ```

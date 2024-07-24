@@ -1,0 +1,13 @@
+---
+- name: Get join command
+  ansible.builtin.shell:
+    cmd: grep -A 2 'kubeadm join' ../ansible-kcp/roles/join/files/join.md | tail -2
+  register: join_cmd
+  delegate_to: localhost
+- name: Join node to cluster
+  ansible.builtin.shell:
+    cmd: "{{ join_cmd.stdout }}"
+  register: join_result
+- name: Display join results
+  ansible.builtin.debug:
+    var: join_result

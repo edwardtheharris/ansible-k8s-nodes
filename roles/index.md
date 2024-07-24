@@ -1,28 +1,23 @@
 ---
-abstract: This directory contains the playbook to sign a certificate.
-authors: Xander Harris
-date: 2024-03-08
-title: Sign a Cert
+abstract: This role resets existing K8S nodes to prepare for the join role.
+authors:
+    - name: Xander Harris
+      email: xandertheharris@gmail.com
+date: 2024-07-24
+title: Reset K8S Node
 ---
 
-## Cert Signing Usage
+## Reset K8S Node Usage
 
 ```{code-block} shell
-:caption: sign a certificate
-
-ansible-playbook sign/site.yml
+ansible-playbook -t reset site.yml
 ```
 
-```{index} certificate; sign
+```{index} roles; reset
 ```
 
-## Signing Playbook
-<!--
-```{autoyaml} sign/site.yml
-```
--->
+## Reset K8S Node Playbook
 
-```{literalinclude} site.yml
+```{literalinclude} /roles/reset/tasks/main.yml
 :language: yaml
-:caption: sign a cert
 ```

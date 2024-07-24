@@ -1,0 +1,8 @@
+---
+- name: Join k8s nodes to cluster
+  hosts: k8s
+  become: true
+  roles:
+    - role: join
+      tags:
+        - join

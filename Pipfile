@@ -10,6 +10,8 @@ ansible-navigator = "*"
 gitpython = "*"
 loguru = "*"
 redis = "*"
+pipenv = "*"
+ansible-lint = "*"
 
 [dev-packages]
 molecule = "*"
@@ -33,10 +35,3 @@ sphinxemoji = "*"
 sphinxext-opengraph = "*"
 sphinxext-rediraffe = "*"
 sphinx-notfound-page = "*"
-
-[lint]
-ansible-lint = "*"
-
-[git]
-loguru = "*"
-gitpython = "*"

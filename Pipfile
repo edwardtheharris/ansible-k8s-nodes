@@ -12,6 +12,7 @@ loguru = "*"
 redis = "*"
 pipenv = "*"
 ansible-lint = "*"
+paramiko = "*"
 
 [dev-packages]
 molecule = "*"

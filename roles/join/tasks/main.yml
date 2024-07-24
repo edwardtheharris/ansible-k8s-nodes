@@ -11,12 +11,3 @@
 - name: Display join results
   ansible.builtin.debug:
     var: join_result
-- name: Get k8s nodes
-  ansible.builtin.shell:
-    cmd: kubectl get nodes
-  register: nodes_result
-  delegate_to: localhost
-- name: Display nodes
-  ansible.builtin.debug:
-    var: nodes_result.stdout
-  delegate_to: localhost

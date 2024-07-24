@@ -3,9 +3,9 @@
   hosts: k8s
   become: true
   roles:
-    # - role: reset
-    #   tags:
-    #     - reset
+    - role: reset
+      tags:
+        - reset
     - role: join
       tags:
         - join

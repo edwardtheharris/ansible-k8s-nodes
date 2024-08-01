@@ -27,33 +27,39 @@ is responsible for authentication, file, and routing services.
 ```{code-block} yaml
 :caption: /etc/ansible/hosts.yaml
 
-dc:
-  hosts:
-    dc01.example.com:
-      ansible_user: user
-    dc02.example.com:
-      ansible_user: user
-np:
-  hosts:
-    napalm.example.com:
-      ansible_user: user
+---
 kcp:
   hosts:
     kcp01.example.com:
-      ansible_user: user
-    kcp02.example.com:
-      ansible_user: user
-ca:
+      ansible_host: 172.16.0.5
+k8s:
   hosts:
-    ca.example.com:
-      ansible_user: user
-      secret_ca_passphrase: secret-ca-passphrase
-```
-
-```{toctree}
-:caption: Other Information
-
-cicd
-license
-security
+    k8s01.example.com:
+      ansible_host: 172.16.0.11
+    k8s02.example.com:
+      ansible_host: 172.16.0.12
+    k8s03.example.com:
+      ansible_host: 172.16.0.13
+    k8s04.example.com:
+      ansible_host: 172.16.0.14
+    k8s05.example.com:
+      ansible_host: 172.16.0.15
+    k8s06.example.com:
+      ansible_host: 172.16.0.16
+    k8s07.example.com:
+      ansible_host: 172.16.0.17
+    k8s08.example.com:
+      ansible_host: 172.16.0.18
+    k8s09.example.com:
+      ansible_host: 172.16.0.19
+    k8s10.example.com:
+      ansible_host: 172.16.0.20
+local:
+  hosts:
+    localhost:
+      ansible_connection: local
+  vars:
+    scp_cfg_src: kcp01.example.com:.kube/config
+    scp_cfg_dest: /home/user/.kube/config
+    scp_cfg_home: /home/user/.kube/config
 ```

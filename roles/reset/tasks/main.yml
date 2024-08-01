@@ -1,4 +1,10 @@
 ---
+  ###
+  # ```{rubric} Reset Nodes and Remove them
+  # ```
+  # ---
+  # These tasks reset the target nodes with `kubeadm` then remove them from the
+  # target cluster.
 - name: Reset existing nodes
   ansible.builtin.shell:
     cmd: kubeadm reset -f

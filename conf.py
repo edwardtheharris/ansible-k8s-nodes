@@ -96,6 +96,7 @@ project = 'Ansible Certificate Authority'
 release = '0.0.1'
 show_authors = True
 source_suffix = {
-    '.md': 'markdown'
+    '.md': 'markdown',
+    '.rst': 'restructuredText'
 }
 templates_path = ['_templates']

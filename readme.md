@@ -54,12 +54,4 @@ k8s:
       ansible_host: 172.16.0.19
     k8s10.example.com:
       ansible_host: 172.16.0.20
-local:
-  hosts:
-    localhost:
-      ansible_connection: local
-  vars:
-    scp_cfg_src: kcp01.example.com:.kube/config
-    scp_cfg_dest: /home/user/.kube/config
-    scp_cfg_home: /home/user/.kube/config
 ```

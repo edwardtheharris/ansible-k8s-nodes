@@ -8,11 +8,19 @@
 """
 # pylint: disable=invalid-name,redefined-builtin
 
+from pathlib import Path
+import version_query
+
+def get_release():
+    """Query the current release for the project."""
+    repo_path = Path('.')
+    ret_value = version_query.git_query.query_git_repo(repo_path).to_str()
+    return ret_value
+
 author = 'Xander Harris'
-ansible_roles_path = ['.']
-ansible_tmp_dir = "/tmp/sphinx-ansible"
 autoyaml_root = "."
 autoyaml_depth = 10
+autoyaml_safe_loader = False
 
 copyright = '2024, Xander Harris'
 
@@ -31,7 +39,6 @@ exclude_patterns = [
 
 extensions = [
     'myst_parser',
-    'notfound.extension',
     'sphinx_design',
     'sphinx_favicon',
     'sphinx.ext.autodoc',
@@ -43,7 +50,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.autoyaml',
-    'sphinxcontrib.sphinx_ansible',
+    'sphinxcontrib.ansibleautodoc',
 ]
 
 favicons = [
@@ -65,12 +72,12 @@ favicons = [
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+html_logo = '_static/img/ansible.png'
 html_static_path = ['_static']
-html_theme = 'sphinx_nefertiti'
+html_theme = 'sphinx_book_theme'
 html_theme_options = {
-    'logo': 'img/ansible.png',
-    'repository_url': 'https://github.com/edwardtheharris/ansible-k8s-ca',
-    'repository_name': 'ansible k8s ca',
+    'repository_url': 'https://github.com/edwardtheharris/ansible-k8s-nodes',
+    'repository_name': 'ansible k8s nodes',
     "style": "blue",
 }
 myst_dmath_double_inline = True
@@ -92,7 +99,7 @@ myst_enable_extensions = [
     "tasklist",
 ]
 myst_title_to_header = True
-project = 'Ansible Certificate Authority'
+project = 'Ansible K8S Nodes'
 release = '0.0.1'
 show_authors = True
 source_suffix = {

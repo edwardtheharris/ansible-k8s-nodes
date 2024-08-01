@@ -1,9 +1,4 @@
 ---
-  ###
-  # ```{rubric} Join Kubernetes nodes
-  # ```
-  # ---
-  # These tasks find the join command and execute it on the target nodes.
 - name: Get join command
   ansible.builtin.shell:
     cmd: grep -A 2 'kubeadm join' ../ansible-kcp/roles/join/files/join.md | tail -2

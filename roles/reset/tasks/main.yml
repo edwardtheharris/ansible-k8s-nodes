@@ -6,3 +6,7 @@
 - name: Show reset results
   ansible.builtin.debug:
     var: reset_result.stdout
+- name: Delete nodes from cluster
+  ansible.builtin.shell:
+    cmd: "kubectl delete nodes {{ inventory_hostname }}"
+  delegate_to: kcp01

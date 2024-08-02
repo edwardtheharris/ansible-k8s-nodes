@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d4409ce8401f9b5016a96faf3eee0d0ade78592b2c40b127aa707c940c3600ea"
+            "sha256": "7cfa180963d4a3181b0955ee0c3b3c11eb2499a4b9f73f382775665bade98282"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -861,7 +861,7 @@
                 "sha256:5a03e1860cf56bb6ef48ce186b0e557fdba433237481a9a625176c2831be15d1",
                 "sha256:8d243eff56d095e5817f796ede6ae32941278f542e0f941867cc05ae52b162ec"
             ],
-            "markers": "python_version >= '3.11'",
+            "markers": "python_version >= '3.8'",
             "version": "==72.1.0"
         },
         "smmap": {
@@ -2007,7 +2007,7 @@
                 "sha256:5a03e1860cf56bb6ef48ce186b0e557fdba433237481a9a625176c2831be15d1",
                 "sha256:8d243eff56d095e5817f796ede6ae32941278f542e0f941867cc05ae52b162ec"
             ],
-            "markers": "python_version >= '3.11'",
+            "markers": "python_version >= '3.8'",
             "version": "==72.1.0"
         },
         "smmap": {
@@ -2113,11 +2113,8 @@
             "version": "==0.4.3"
         },
         "sphinxcontrib-ansibleautodoc": {
-            "hashes": [
-                "sha256:73b4032f7a64ec0ac2ba8d85175aa4d78534272260fa4162f2aa1e8d3262d5f4"
-            ],
-            "index": "pypi",
-            "version": "==0.0.5"
+            "editable": true,
+            "file": "../sphinxcontrib-ansibleautodoc"
         },
         "sphinxcontrib-applehelp": {
             "hashes": [

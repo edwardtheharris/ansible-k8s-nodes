@@ -77,8 +77,6 @@ html_static_path = ['_static']
 html_theme = 'sphinx_book_theme'
 html_theme_options = {
     'repository_url': 'https://github.com/edwardtheharris/ansible-k8s-nodes',
-    'repository_name': 'ansible k8s nodes',
-    "style": "blue",
 }
 myst_dmath_double_inline = True
 myst_enable_extensions = [

@@ -22,7 +22,7 @@ ansible-playbook -t reset site.yml
 :language: yaml
 ```
 
-```{ansibleautotask} Reset existing nodes
-:playbook: site.yml
+```{ansibletask} Reset existing nodes
+:playbook: main.yml
 :role: reset
 ```

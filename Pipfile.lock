@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "7cfa180963d4a3181b0955ee0c3b3c11eb2499a4b9f73f382775665bade98282"
+            "sha256": "a159ccee813efc7b30c6a97b3e18d9506cf3ee1ee33e67804f3156152366b8cb"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -2111,10 +2111,6 @@
             "index": "pypi",
             "markers": "python_version >= '3.8'",
             "version": "==0.4.3"
-        },
-        "sphinxcontrib-ansibleautodoc": {
-            "editable": true,
-            "file": "../sphinxcontrib-ansibleautodoc"
         },
         "sphinxcontrib-applehelp": {
             "hashes": [

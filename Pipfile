@@ -33,4 +33,3 @@ sphinx-tippy = "*"
 sphinxcontrib-autoyaml = "*"
 sphinxemoji = "*"
 version-query = "*"
-sphinxcontrib-ansibleautodoc = {file = "../sphinxcontrib-ansibleautodoc", editable = true}

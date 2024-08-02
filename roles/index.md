@@ -4,20 +4,23 @@ authors:
     - name: Xander Harris
       email: xandertheharris@gmail.com
 date: 2024-07-24
-title: Reset K8S Node
+title: K8S nodes roles
 ---
 
-## Reset K8S Node Usage
+## Roles Usage
+
+To run the full cycle on your target nodes simply run the playbook with no tags.
 
 ```{code-block} shell
-ansible-playbook -t reset site.yml
+ansible-playbook site.yml
 ```
 
 ```{index} roles; reset
 ```
 
-## Reset K8S Node Playbook
+```{toctree}
+:caption: Roles Contents
 
-```{literalinclude} /roles/reset/tasks/main.yml
-:language: yaml
+join/index
+reset/index
 ```

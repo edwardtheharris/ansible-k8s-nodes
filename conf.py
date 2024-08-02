@@ -50,7 +50,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.inheritance_diagram',
     'sphinxcontrib.autoyaml',
-    'sphinxcontrib.ansibleautodoc',
 ]
 
 favicons = [

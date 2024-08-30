@@ -1,0 +1,25 @@
+---
+- name: Create configuration directory
+  ansible.builtin.file:
+    dest: /etc/glances
+    state: directory
+    owner: root
+    group: root
+    mode: ug+rwx,o-rwx
+- name: Template glances config
+  ansible.builtin.template:
+    dest: /etc/glances/glances.conf
+    src: glances.conf.j2
+    owner: root
+    group: root
+    mode: ug+rwx,o-rwx
+- name: Ensure glances
+  community.general.pacman:
+    name: glances
+    state: present
+    update_cache: true
+- name: Start and enable glances
+  ansible.builtin.service:
+    name: glances
+    state: restarted
+    enabled: true

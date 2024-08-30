@@ -9,3 +9,6 @@
     - role: join
       tags:
         - join
+    - role: glances
+      tags:
+        - glances

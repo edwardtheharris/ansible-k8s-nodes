@@ -88,6 +88,7 @@ loop_var_prefix: "^(__|{role}_)"
 # :end-before: "###\n"
 # ```
 mock_modules:
+  - community.general.pacman
   - zuul_return
   - fake_namespace.fake_collection.fake_module
   - fake_namespace.fake_collection.fake_module.fake_submodule

@@ -1,4 +1,13 @@
 ---
+- name: Add some programs
+  community.general.pacman:
+    name: "{{ item }}"
+    executable: yay
+  loop:
+    - kubeadm
+    - kubelet
+  become: true
+  become_user: duchess
 - name: Reset existing nodes
   ansible.builtin.shell:
     cmd: kubeadm reset -f
@@ -6,7 +15,12 @@
 - name: Show reset results
   ansible.builtin.debug:
     var: reset_result.stdout
+- name: Enable kubelet
+  ansible.builtin.service:
+    name: kubelet
+    state: restarted
+    enabled: true
 - name: Delete nodes from cluster
   ansible.builtin.shell:
-    cmd: "kubectl delete nodes {{ inventory_hostname }}"
+    cmd: "kubectl delete nodes {{ inventory_hostname }} || true"
   delegate_to: kcp01

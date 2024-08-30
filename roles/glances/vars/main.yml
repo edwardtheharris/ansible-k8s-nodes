@@ -1,0 +1,5 @@
+---
+glances_user: glances
+glances_value: 1000
+glances_max: 10000
+glances_percent: 50

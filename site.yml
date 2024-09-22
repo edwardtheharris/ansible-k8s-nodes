@@ -1,6 +1,6 @@
 ---
 - name: Join k8s nodes to cluster
-  hosts: k8s
+  hosts: k8s09.breeze-blocks.net
   become: true
   roles:
     - role: reset

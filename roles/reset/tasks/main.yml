@@ -1,13 +1,71 @@
 ---
+- name: Check for yay
+  ansible.builtin.stat:
+    path: /usr/bin/yay
+  register: yay
+- name: Clone yay repo
+  ansible.builtin.git:
+    accept_hostkey: true
+    clone: true
+    dest: "/home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay"
+    repo: https://aur.archlinux.org/yay.git
+  become: true
+  become_user: "{{ non_root_user }}"
+  when: yay.stat
+- name: Remove exisiting binary versions
+  community.general.pacman:
+    name: "{{ item }}"
+    state: absent
+  loop:
+    - yay-bin-debug
+    - yay-bin
+  when: yay.stat
+- name: Install yay
+  ansible.builtin.shell:
+    cmd: makepkg -si --noconfirm
+    chdir: "/home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay"
+    creates: /usr/bin/yay
+  become: true
+  become_user: "{{ non_root_user }}"
 - name: Add some programs
   community.general.pacman:
     name: "{{ item }}"
     executable: yay
-  loop:
-    - kubeadm
-    - kubelet
+    state: latest
+    update_cache: true
+  loop: "{{ reset_install_packages }}"
   become: true
-  become_user: duchess
+  become_user: "{{ non_root_user }}"
+- name: Add missing firmware
+  ansible.builtin.shell:
+    cmd: yay -Syyu aic94xx-firmware ast-firmware linux-firmware-qlogic upd72020x-fw wd719x-firmware --noconfirm
+  become: true
+  become_user: "{{ non_root_user }}"
+- name: Run mkinitcpio
+  ansible.builtin.shell:
+    cmd: mkinitcpio -P
+- name: Enable reflector
+  ansible.builtin.service:
+    name: reflector
+    state: restarted
+    enabled: true
+- name: Copy kernel conf
+  ansible.builtin.copy:
+    src: m-k8s.conf
+    dest: /etc/modules-load.d/k8s.conf
+    owner: root
+    group: root
+    mode: ug+rw
+- name: Copy sysctl conf
+  ansible.builtin.copy:
+    src: s-k8s.conf
+    dest: /etc/sysctl.d/k8s.conf
+    owner: root
+    group: root
+    mode: ug+rw
+- name: Enable sysctl
+  ansible.builtin.shell:
+    cmd: sysctl --system
 - name: Reset existing nodes
   ansible.builtin.shell:
     cmd: kubeadm reset -f

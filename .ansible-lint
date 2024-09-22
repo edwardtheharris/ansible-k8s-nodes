@@ -1,4 +1,3 @@
----
 ###
 # ```{rubric} .ansible-lint
 # ```
@@ -24,6 +23,7 @@ enable_list:
   - no-same-owner # opt-in
   - name[prefix] # opt-in
   - yaml
+
 ###
 # ```{rubric} Exclude Paths
 # ```
@@ -50,6 +50,7 @@ exclude_paths:
   - _static/
   - .markdownlint-cli2.yaml
   - .markdownlint.yaml
+
 ###
 # ```{rubric} Kinds
 # ```
@@ -72,9 +73,11 @@ kinds:
   # - vars: "**/vars/*.yml"
   # - meta: "**/meta/main.yml"
   - playbook: "site.yaml"
+
 ###
 # Enable checking of loop variable prefixes in roles
 loop_var_prefix: "^(__|{role}_)"
+
 ###
 # ```{rubric} Mocks
 # ```
@@ -92,6 +95,7 @@ mock_modules:
   - zuul_return
   - fake_namespace.fake_collection.fake_module
   - fake_namespace.fake_collection.fake_module.fake_submodule
+
 ###
 # role within a collection
 # old standalone galaxy role
@@ -104,6 +108,7 @@ mock_roles:
   - mocked_role
   - author.role_name
   - fake_namespace.fake_collection.fake_role
+
 ###
 # Some rules can transform files to fix (or make it easier to fix) identified
 # errors. `ansible-lint --fix` will reformat YAML files and run these transforms.
@@ -114,9 +119,11 @@ mock_roles:
 #   - all
 # Offline mode disables installation of requirements.yml and schema refreshing
 offline: true
+
 ###
 # min, basic, moderate,safety, shared, production
 profile: null
+
 ###
 # Ansible-lint is able to recognize and load skip rules stored inside
 # `.ansible-lint-ignore` (or `.config/ansible-lint-ignore.txt`) files.
@@ -136,7 +143,10 @@ skip_list:
   - loop-var-prefix[missing]
   - no-changed-when
   - risky-shell-pipe
+  - latest[git]
   - skip_this_tag
+  - args[module]
+
 ###
 # Define required Ansible's variables to satisfy syntax check
 # extra_vars:
@@ -160,11 +170,13 @@ skip_list:
 #
 # Allow setting custom prefix for name[prefix] rule
 task_name_prefix: "{stem} | "
+
 ###
 # Load custom rules from this specific folder
 # rulesdir:
 #   - ./rule/directory/
 use_default_rules: true
+
 ###
 # Complexity related settings
 # Limit the depth of the nested blocks:
@@ -173,6 +185,7 @@ use_default_rules: true
 # requirements, like avoiding python identifiers. To disable add `var-naming`
 # to skip_list.
 var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+
 ###
 # ```{rubric} Warn List
 # ```

@@ -18,6 +18,14 @@
     name: glances
     state: present
     update_cache: true
+- name: Install glances in root
+  ansible.builtin.pip:
+    name: "{{ item }}"
+    state: present
+    virtualenv: /root/.local
+  loop:
+    - glances[all]
+    - uvicorn
 - name: Start and enable glances
   ansible.builtin.service:
     name: glances

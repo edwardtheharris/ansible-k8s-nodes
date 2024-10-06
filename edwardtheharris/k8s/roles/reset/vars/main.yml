@@ -1,3 +1,4 @@
+---
 reset_install_packages:
   - kubeadm
   - kubelet

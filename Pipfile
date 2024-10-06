@@ -12,19 +12,21 @@ cryptography = ">=43.0.1"
 gitpython = "*"
 loguru = "*"
 paramiko = "*"
+pip = "*"
 pipenv = "*"
 redis = "*"
-pip = "*"
 
 [dev-packages]
+docker = "*"
 molecule = "*"
+molecule-plugins = "*"
 pytest = "*"
 pytest-cov = "*"
+antsibull-changelog = "*"
 
 [docs]
 myst-parser = {extras = ["linkify"], version = "*"}
 sphinx = "*"
-sphinx-ansible = "*"
 sphinx-autobuild = "*"
 sphinx-book-theme = "*"
 sphinx-copybutton = "*"

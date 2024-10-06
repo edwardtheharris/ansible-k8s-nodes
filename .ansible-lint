@@ -1,3 +1,4 @@
+---
 ###
 # ```{rubric} .ansible-lint
 # ```
@@ -72,11 +73,11 @@ kinds:
   # - tasks: "**/tasks/*.yml"
   # - vars: "**/vars/*.yml"
   # - meta: "**/meta/main.yml"
-  - playbook: "site.yaml"
+  - playbook: site.yaml
 
 ###
 # Enable checking of loop variable prefixes in roles
-loop_var_prefix: "^(__|{role}_)"
+loop_var_prefix: ^(__|{role}_)
 
 ###
 # ```{rubric} Mocks
@@ -122,7 +123,7 @@ offline: true
 
 ###
 # min, basic, moderate,safety, shared, production
-profile: null
+profile:
 
 ###
 # Ansible-lint is able to recognize and load skip rules stored inside
@@ -184,7 +185,7 @@ use_default_rules: true
 # Enforce variable names to follow pattern below, in addition to Ansible own
 # requirements, like avoiding python identifiers. To disable add `var-naming`
 # to skip_list.
-var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+var_naming_pattern: ^[a-z_][a-z0-9_]*$
 
 ###
 # ```{rubric} Warn List

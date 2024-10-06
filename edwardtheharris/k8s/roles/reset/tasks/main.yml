@@ -7,7 +7,7 @@
   ansible.builtin.git:
     accept_hostkey: true
     clone: true
-    dest: "/home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay"
+    dest: /home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay
     repo: https://aur.archlinux.org/yay.git
   become: true
   become_user: "{{ non_root_user }}"
@@ -23,7 +23,7 @@
 - name: Install yay
   ansible.builtin.shell:
     cmd: makepkg -si --noconfirm
-    chdir: "/home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay"
+    chdir: /home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay
     creates: /usr/bin/yay
   become: true
   become_user: "{{ non_root_user }}"
@@ -80,5 +80,5 @@
     enabled: true
 - name: Delete nodes from cluster
   ansible.builtin.shell:
-    cmd: "kubectl delete nodes {{ inventory_hostname }} || true"
+    cmd: kubectl delete nodes {{ inventory_hostname }} || true
   delegate_to: kcp01

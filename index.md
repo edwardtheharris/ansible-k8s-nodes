@@ -22,6 +22,17 @@ roles/index
 ```{index} ansible; roles
 ```
 
+## Galaxy
+
+```{toctree}
+:caption: Ansible Galaxy
+
+edwardtheharris/index
+```
+
+```{index} ansible; galaxy
+```
+
 ```{toctree}
 :caption: meta
 :maxdepth: 1

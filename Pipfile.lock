@@ -974,12 +974,12 @@
         },
         "antsibull-changelog": {
             "hashes": [
-                "sha256:37660a748cf2597ba9cdf26172ceac87ca5c227e693f50b4592da71c45c0bb74",
-                "sha256:5ae38c10366d5226e5358ee3265e5dddde0b1b36e45970429e4ce3186f178426"
+                "sha256:834f5c3274a0b655705c8659f669e428b87b7779af00cd7d19aba55be1f5fa65",
+                "sha256:cbdc22ccc2363c0c3306815c8b7ff9d1d1ccf7c999efe9345127ccdd0596d574"
             ],
             "index": "pypi",
             "markers": "python_full_version >= '3.9.0'",
-            "version": "==0.30.0"
+            "version": "==0.31.0"
         },
         "antsibull-docutils": {
             "hashes": [

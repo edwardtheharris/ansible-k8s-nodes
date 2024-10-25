@@ -975,12 +975,12 @@
         },
         "antsibull-changelog": {
             "hashes": [
-                "sha256:37660a748cf2597ba9cdf26172ceac87ca5c227e693f50b4592da71c45c0bb74",
-                "sha256:5ae38c10366d5226e5358ee3265e5dddde0b1b36e45970429e4ce3186f178426"
+                "sha256:834f5c3274a0b655705c8659f669e428b87b7779af00cd7d19aba55be1f5fa65",
+                "sha256:cbdc22ccc2363c0c3306815c8b7ff9d1d1ccf7c999efe9345127ccdd0596d574"
             ],
             "index": "pypi",
             "markers": "python_full_version >= '3.9.0'",
-            "version": "==0.30.0"
+            "version": "==0.31.0"
         },
         "antsibull-docutils": {
             "hashes": [
@@ -992,11 +992,11 @@
         },
         "antsibull-fileutils": {
             "hashes": [
-                "sha256:104cc078dfd1adad555771bf74e16a3f2670f128364d60d44faf4e9028d2e1d1",
-                "sha256:a01471cc6480dc55eb9be223a04bf96a7f8c583657b824285afb44dcb0b4490c"
+                "sha256:558c517b41973b3716f2edc726bf04bc2bef5a0662ee609378f04a66d22d2e06",
+                "sha256:69e35bc5d8025c52eac3660290e32b691e08b1d3603da1a5b20d16d75ec39f98"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==1.0.1"
+            "version": "==1.1.0"
         },
         "attrs": {
             "hashes": [
@@ -1723,11 +1723,11 @@
         },
         "rich": {
             "hashes": [
-                "sha256:51a2c62057461aaf7152b4d611168f93a9fc73068f8ded2790f29fe2b5366d0c",
-                "sha256:8c82a3d3f8dcfe9e734771313e606b39d8247bb6b826e196f4914b333b743cf1"
+                "sha256:9836f5096eb2172c9e77df411c1b009bace4193d6a481d534fea75ebba758283",
+                "sha256:bc1e01b899537598cf02579d2b9f4a415104d3fc439313a7a2c165d76557a08e"
             ],
             "markers": "python_full_version >= '3.8.0'",
-            "version": "==13.9.2"
+            "version": "==13.9.3"
         },
         "rpds-py": {
             "hashes": [

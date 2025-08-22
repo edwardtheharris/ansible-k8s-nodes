@@ -17,7 +17,9 @@ plugins/index
 ```{toctree}
 :caption: readme
 
-README
+readme
+changelog
+roles/index
 ```
 
 ## Galaxy Schema Info

@@ -13,11 +13,5 @@ title: Kubernetes Node Namespace
 k8s/index
 ```
 
-```{toctree}
-:caption: readmes
-
-k8s/README
-```
-
 ```{sectionauthor} Xander Harris <xandertheharris@gmail.com>
 ```

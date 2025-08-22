@@ -21,3 +21,9 @@ ansible-playbook -t reset site.yml
 ```{literalinclude} /roles/reset/tasks/main.yml
 :language: yaml
 ```
+
+```{toctree} 
+:caption: readme
+
+readme
+```

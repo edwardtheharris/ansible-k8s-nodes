@@ -21,3 +21,9 @@ ansible-playbook -t join site.yml
 ```{literalinclude} /roles/join/tasks/main.yml
 :language: yaml
 ```
+
+```{toctree}
+:caption: readme
+
+readme
+```

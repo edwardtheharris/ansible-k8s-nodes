@@ -17,15 +17,11 @@ pipenv = "*"
 redis = "*"
 
 [dev-packages]
+antsibull-changelog = "*"
 docker = "*"
-molecule = "*"
-molecule-plugins = "*"
+myst-parser = {extras = ["linkify"], version = "*"}
 pytest = "*"
 pytest-cov = "*"
-antsibull-changelog = "*"
-
-[docs]
-myst-parser = {extras = ["linkify"], version = "*"}
 sphinx = "*"
 sphinx-autobuild = "*"
 sphinx-book-theme = "*"

@@ -36,7 +36,7 @@ description: Some roles for managing bare metal Kubernetes.
 # Either a single license or a list of licenses for content inside of a collection. Ansible Galaxy currently only
 # accepts L(SPDX,https://spdx.org/licenses/) licenses. This key is mutually exclusive with 'license_file'
 license:
-  - Unlicense
+  - Copyright (c) 2025, Xander Harris. All rights reserved.
 
 # The path to the license file for the collection. This path is relative to the root of the collection. This key is
 # mutually exclusive with 'license'

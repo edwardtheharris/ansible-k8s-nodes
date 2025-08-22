@@ -18,6 +18,9 @@ ansible-playbook -t join site.yml
 
 ### Join K8S Playbook
 
-```{literalinclude} /roles/join/tasks/main.yml
-:language: yaml
+
+```{toctree}
+:caption: readme
+
+readme
 ```

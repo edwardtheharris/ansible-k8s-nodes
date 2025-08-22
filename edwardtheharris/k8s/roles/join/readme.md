@@ -1,38 +1,41 @@
-Role Name
-=========
+---
+abstract: Ansible Role to join a node to an existing cluster.
+date: 2025-08-21
+title: Join a node to the cluster
+---
 
 A brief description of the role goes here.
 
-Requirements
-------------
+## Requirements
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+`kubectl` and `kubeadm` available in the executable path of the targets.
 
-Role Variables
---------------
+## Role Variables
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+n/a
 
-Dependencies
-------------
+## Dependencies
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+n/a
 
-Example Playbook
-----------------
+## Example Playbook
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+After you have run the code in the [ansible-kcp](https://github.com/edwardtheharris/ansible-kcp.git)
+repository, you should find in this repository the text files required to parse for connection
+information to the cluster.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+This is generally handled with certificates and matching tokens, which should be generated during
+the build process.
 
-License
--------
 
-BSD
+```{code-block} yaml
 
-Author Information
-------------------
+- name: join
+  hosts: k8s-nodes
+  roles:
+      - { role: username.rolename, x: 42 }
+```
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+### License
+
+Copyright (c) 2025, Xander Harris. All rights reserved.

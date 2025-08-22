@@ -20,7 +20,7 @@ title: Ansible K8S Nodes
 ```{toctree}
 :caption: Ansible Galaxy
 
-edwardtheharris/index
+roles/index
 ```
 
 ```{index} ansible; galaxy

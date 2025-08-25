@@ -12,13 +12,6 @@ title: Ansible K8S Nodes
 [![GitHub Pages Status](https://img.shields.io/github/actions/workflow/status/edwardtheharris/ansible-k8s-ca/pages.yml?branch=main&style=flat-square&logo=githubpages&label=GitHub%20Pages)](https://edwardtheharris.github.io/ansible-k8s-ca/)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/edwardtheharris/ansible-k8s-ca/shell.yml?branch=main&style=flat-square&logo=gnubash&label=ShellCheck)
 
-```{toctree}
-:caption: Roles
-:maxdepth: 3
-
-roles/index
-```
-
 ```{index} ansible; roles
 ```
 
@@ -27,7 +20,7 @@ roles/index
 ```{toctree}
 :caption: Ansible Galaxy
 
-edwardtheharris/index
+roles/index
 ```
 
 ```{index} ansible; galaxy

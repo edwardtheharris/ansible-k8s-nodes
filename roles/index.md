@@ -21,6 +21,7 @@ ansible-playbook site.yml
 ```{toctree}
 :caption: Roles Contents
 
+glances/readme
 join/index
 reset/index
 ```

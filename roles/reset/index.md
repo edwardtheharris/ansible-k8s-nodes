@@ -18,6 +18,9 @@ ansible-playbook -t reset site.yml
 
 ## Reset K8S Node Playbook
 
-```{literalinclude} /roles/reset/tasks/main.yml
-:language: yaml
+
+```{toctree} 
+:caption: readme
+
+readme
 ```

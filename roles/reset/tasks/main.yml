@@ -2,16 +2,17 @@
 - name: Check for yay
   ansible.builtin.stat:
     path: /usr/bin/yay
-  register: yay
+  register: reset_yay
 - name: Clone yay repo
   ansible.builtin.git:
     accept_hostkey: true
     clone: true
-    dest: /home/{{ non_root_user }}/Documents/src/aur.archlinux.org/yay
+    dest: >-
+      /home/{{ reset_non_root_user }}/Documents/src/aur.archlinux.org/yay
     repo: https://aur.archlinux.org/yay.git
   become: true
   become_user: "{{ non_root_user }}"
-  when: yay.stat
+  when: reset_yay.stat
 - name: Remove exisiting binary versions
   community.general.pacman:
     name: "{{ item }}"
@@ -19,7 +20,7 @@
   loop:
     - yay-bin-debug
     - yay-bin
-  when: yay.stat
+  when: reset_yay.stat
 - name: Install yay
   ansible.builtin.shell:
     cmd: makepkg -si --noconfirm

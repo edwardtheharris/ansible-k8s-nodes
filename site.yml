@@ -3,12 +3,12 @@
   hosts: k8s09.breeze-blocks.net
   become: true
   roles:
-    - role: edwardtheharris.k8s.reset
+    - role: reset
       tags:
         - reset
-    - role: edwardtheharris.k8s.join
+    - role: join
       tags:
         - join
-    - role: edwardtheharris.k8s.glances
+    - role: glances
       tags:
         - glances

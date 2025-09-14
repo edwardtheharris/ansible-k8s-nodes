@@ -1,0 +1,3 @@
+# This file contains ignores rule violations for ansible-lint
+edwardtheharris/k8s/roles/reset/tasks/main.yml var-naming[no-role-prefix]
+site.yml syntax-check[specific]

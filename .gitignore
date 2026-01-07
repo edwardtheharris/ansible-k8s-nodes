@@ -1,4 +1,6 @@
 _build/
+*.gpg
+*.xml
 .ansible/
 .venv/
 .vscode/
